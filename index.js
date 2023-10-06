@@ -92,9 +92,12 @@ if (theSerialComponent) {
   theSerialComponent.customHandler = function(message) {
     // do whatever you want with the 'message'
     receiveTextBox.value = message;
-    if (message == "play") {
+    if (message.match(/play/)) {
       audioPlayerElement.play();
+    } else if (message.match(/pause/)) {
+      audioPlayerElement.pause();
     }
+    
   }
 }
 
