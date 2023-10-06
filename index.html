@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WebBluetoothSerial</title>
+    <script src="components/SerialComponent/SerialComponent.js"></script>
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js" integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="componentStyle.css">
+  </head>
+  <body>
+    
+    <!-- example simple web interface with its own Connect/Disconnect button and send/receive -->        
+    <button id="connectButton">Connect Bluetooth</button>    
+    <button id="sendButton">Send</button>
+    <input type="text" id="sendTextBox"></input>
+    <input type="text" id="receiveTextBox"></input>
+    <audio src="audio/feed_me.wav" id="audioPlayer" controls></audio>
+
+    <!-- custom-serial component allows for bluetooth serial communication with a microcontroller -->
+    <!-- to show its test interface change style="display: none;" to style="display: block;" -->
+    <custom-serial id="customSerial" style="display: none;"></custom-serial>
+    <script src="index.js"></script>
+  </body>
+</html>
